@@ -51,9 +51,17 @@ array.forEach((n) => {
       console.log(n);
 });
 
-//Array method filter map reduc
+//Array method filter map reduce
+//map takes the value and change it according to the condition
 array.filter(n => n%2===0)
+     .map(n => n*2) // map doubles the n here
      .forEach(x => {
         console.log(x);
      })
 
+// instead of looping, if we need single value then use reduce
+let result = array.filter(n => n%2===0)
+     .map(n => n*2) // map doubles the n here
+     .reduce((a,b) => a+b);
+    
+console.log(result);
